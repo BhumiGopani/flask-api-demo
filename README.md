@@ -24,9 +24,10 @@ If you do not get any errors, then you imported Flask successfully.
 
 pip install -r requirements.txt
 
-$ python puppy.py createdb
-Database created!
-$ python puppy.py seeddb
-Database seeded!
+To create Just Flask stattic API please check :
+task-app/app.py
+
+To see combination of REST API With Flask & SQL Alchemy
+flask-sql/app.py
 
 

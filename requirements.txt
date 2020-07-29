@@ -5,4 +5,3 @@ Marshmallow-SQLAlchemy
 Flask-Login
 python-slugify
 flask-httpauth
-Flask-PyMongo
