@@ -1,16 +1,8 @@
 name: Main workflow
-on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
-  pull_request:
-    paths-ignore:
-      - '**.md'
+on: [push]
 jobs:
   run:
-    name: Run
+    name: Run task app
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
