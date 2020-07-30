@@ -21,3 +21,10 @@ jobs:
           pip install black || true
       - name: Run Python code
         run: python task-app/app.py
+  newman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
+        with:
+          collection: Fask-API-Demo.postman_collection.json
