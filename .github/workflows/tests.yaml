@@ -1,18 +1,23 @@
 name: Main workflow
 on: [push]
 jobs:
-  run:
-    name: Run task app
-    runs-on: ${{ matrix.operating-system }}
+  build:
     strategy:
       matrix:
-        operating-system: [ubuntu-latest]
+        python-version: [3.8]
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Run with setup-python 3.8.1
-      uses: ./
-      with:
-        python-version: 3.8.1
-    - name: Verify 3.8.1
-      run: cd task-app && python app.py 3.8.1
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # install black if available (Python 3.6 and above)
+          pip install black || true
+      - name: Run Python code
+        run: python task-app/app.py
