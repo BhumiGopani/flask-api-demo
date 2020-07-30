@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+Flask-Marshmallow
+Marshmallow-SQLAlchemy
+Flask-Login
+python-slugify
+flask-httpauth
