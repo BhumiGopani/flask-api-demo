@@ -19,7 +19,7 @@ try
   python3
   >>> import flask
   >>>
-If you do not get any errors, then you imported Flask successfully.```
+If you do not get any errors, then you imported Flask successfully.
 
 ## Please install all the requirements:
 pip install -r requirements.txt
