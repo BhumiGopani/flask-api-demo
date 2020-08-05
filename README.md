@@ -32,6 +32,13 @@ pip install -r requirements.txt
 
 ## To create just Flask stattic API please check:
 task-app/app.py
+# To execute the code, try:
+python task-app/app.py
 
 ## To see combination of REST API With Flask & SQL Alchemy:
 flask-sql/app.py
+# To execute the code, try:
+python flask-sql/app.py
+
+## You can test the API's with postman collection. Please import it for ready to use:
+Fask-API-Demo.postman_collection.json
