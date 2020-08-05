@@ -42,3 +42,5 @@ python flask-sql/app.py
 
 ## You can test the API's with postman collection. Please import it for ready to use:
 Fask-API-Demo.postman_collection.json
+
+## Please note that I have added all the code in single file app.py for better understanding.
